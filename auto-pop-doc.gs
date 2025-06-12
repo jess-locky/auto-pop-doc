@@ -39,14 +39,16 @@ function createNewGoogleDocs() {
     body.replaceText("{{To Name}}", row[0]);
     body.replaceText("{{Company Name}}", row[1]);
     body.replaceText("{{Company Address}}", row[2]);
-    body.replaceText("{{Service Details}}", row[3]);
-    body.replaceText("{{Service One}}", row[4]);
-    body.replaceText("{{Service Two}}", row[5]);
-    body.replaceText("{{Detail One}}", row[6]);
-    body.replaceText("{{Detail Two}}", row[7]);
+    body.replaceText("{{Service Name}}", row[3]);
+    body.replaceText("{{Date}}", row[4]);
+    body.replaceText("{{Service Date}}", row[5]);
+    body.replaceText("{{Service One}}", row[6]);
+    body.replaceText("{{Service Two}}", row[7]);
     body.replaceText("{{Price One}}", row[8]);
     body.replaceText("{{Price Two}}", row[9]);
-    body.replaceText("{{Document Link}}", row[10]);
+    body.replaceText("{{Price Total}}", row[10]);
+    body.replaceText("{{Invoice Number}}", row[11]);
+    body.replaceText("{{Document Link}}", row[12]);
 
     // Save and close the document to apply changes
     doc.saveAndClose();
@@ -55,8 +57,8 @@ function createNewGoogleDocs() {
     const url = doc.getUrl();
 
     // This line puts the link (URL) to the new Google Doc into the spreadsheet,
-    // specifically in the 11th column of the current row.
-    // You can change which column it writes to by editing the number 11 here.
-    sheet.getRange(index + 1, 11).setValue(url);
+    // specifically in the 13th column of the current row.
+    // You can change which column it writes to by editing the number 13 here.
+    sheet.getRange(index + 1, 13).setValue(url);
   });
 }
