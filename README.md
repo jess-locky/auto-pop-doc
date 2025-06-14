@@ -21,6 +21,7 @@ Small script that will auto fill hundreds of documents at once from data in goog
    - Add all your data rows, filling in the information that should replace each placeholder in your template. For example, if your template has `{{Company Name}}` and `{{Invoice Number}}`, your sheet should have columns with customer names and invoice numbers for each row.
    - Make sure the first row is a header row with clear column names that match your placeholders—this helps keep data organized.
    - Leave the last column (e.g., Document Link) empty. The script will write the URL of each generated Google Doc into this column, so name it accordingly (Document Link is recommended).
+   - Give your sheet tab the exact name referenced in the script. For simplicity, you can name your sheet tab the same as your Google Sheets file. Then, update the script’s getSheetByName('Enter Sheet Name') to match the sheet tab name exactly.
 
 3. **Update the script:**
 
