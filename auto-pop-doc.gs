@@ -16,7 +16,7 @@ function createNewGoogleDocs() {
   // Get the destination folder by its ID where the new docs will be saved (replace with your folder ID)
   const destinationFolder = DriveApp.getFolderById('Enter folder ID');
 
-  // Get the active spreadsheet and the specific sheet by its name (replace with your sheet's name)
+  // Get the active spreadsheet and the specific sheet tab by its name (replace with your sheet's name)
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Name of your sheet');
 
   // Get all the data in the sheet as a 2D array (rows and columns)
@@ -25,7 +25,7 @@ function createNewGoogleDocs() {
   // Loop over each row of data
   rows.forEach(function(row, index) {
     if (index === 0) return; // Skip the header row (usually the first row)
-    if (row[12]) return;     // Skip rows that already have a URL in column 11 (index 10)
+    if (row[12]) return;     // Skip rows that already have a URL in the last column, in this example 11 (index 10)
 
     // Make a copy of the template, name it dynamically based on row data, and save it in the destination folder
     const copy = googleDocTemplate.makeCopy(`${row[1]}, ${row[0]} To Name`, destinationFolder);
@@ -59,6 +59,6 @@ function createNewGoogleDocs() {
     // This line puts the link (URL) to the new Google Doc into the spreadsheet,
     // specifically in the 13th column of the current row.
     // You can change which column it writes to by editing the number 13 here.
-    sheet.getRange(index + 1, 12).setValue(url);
+    sheet.getRange(index + 1, 13).setValue(url);
   });
 }
