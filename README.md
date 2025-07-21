@@ -51,6 +51,7 @@ Small script that will auto fill hundreds of documents at once from data in goog
 - The script skips the header row and any rows that already have a URL in the designated column.
 
 **Sample Invoice Follows** 
+
 YOUR COMPANY NAME
 123 COMPANY STREET
 COMPANY CITY, ST 
@@ -78,6 +79,7 @@ Price
 Total: {{Price Total}}
 
 TERMS AND CONDITIONS:
+
 This invoice is subject to the following terms and conditions and shall remain valid until the expiration date specified above {{Service Date}}.
 Delivery Timeline: Delivery will be completed within 5 business days following receipt of payment totaling {{Price Total}}.
 
