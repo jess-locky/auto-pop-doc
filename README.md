@@ -50,3 +50,53 @@ Small script that will auto fill hundreds of documents at once from data in goog
 - You can fill in several at once, no limit.  
 - The script skips the header row and any rows that already have a URL in the designated column.
 
+**Sample Invoice Follows** 
+YOUR COMPANY NAME
+123 COMPANY STREET
+COMPANY CITY, ST 
+POSTAL/ZIP
+
+Invoice Example  
+{{Invoice Number}}
+
+PREPARED FOR
+{{Company Name}}
+{{Company Address}}
+
+PREPARED DATE
+{{Today Date}}
+
+EXP. DATE
+{{Service Date}}
+
+{{Service Name}}
+Price
+{{Service One}} 
+{{Price One}}
+{{Service Two}} 
+{{Price Two}}
+Total: {{Price Total}}
+
+TERMS AND CONDITIONS:
+This invoice is subject to the following terms and conditions and shall remain valid until the expiration date specified above {{Service Date}}.
+Delivery Timeline: Delivery will be completed within 5 business days following receipt of payment totaling {{Price Total}}.
+
+Delivery Location: Delivery will be made FOB (Free On Board) to the facility of {{Company Name}} located at {{Company Address}}.
+
+Service Details: For a comprehensive overview of deliverables, timelines, and subsequent steps, please refer to your Service Outline Deck. Should you have any questions or require further clarification, do not hesitate to contact us.
+
+Payment Terms:
+ Payment in full, amounting to {{Price Total}}, is due within 30 days of the invoice date {{Today Date}}. Please ensure timely payment to avoid any late fees or service interruptions.
+
+ Payments can be made via any accepted payment methods—e.g., bank transfer, credit card, etc. If you have any questions regarding payment, please contact our billing department promptly.
+
+ Failure to remit payment within the specified timeframe may result in additional charges or suspension of services until the account is settled.
+
+We appreciate your trust in our services and look forward to a successful partnership.
+
+{{To Name}}
+
+{{Company Name}}
+
+{{Today 
+Date}}
